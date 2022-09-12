@@ -3,27 +3,18 @@
 int main()
 {
 
-    // declare array ! ;
-    // arr of ints   !
-    int *numbers;
-    int n;
-    printf("Enter the length ! \n");
-    scanf("%d", &n);
+    srand(time(NULL));
 
-    printf("%d", n);
-
-    for (int i = 0; i < n; i++)
+    printf("the random number is ! %d \n", 1 + (rand() % (10 - 1)));
+    int arr[5];
+    for (int i = 0; i < 5; i++)
     {
-
-        printf("%s %d \n", "Enter data of ", i);
-        scanf("%d", numbers[i]);
+        arr[i] = i;
     }
-    printf("Printing all the datas ! \n");
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 5; i++)
     {
-        printf("%d , ", numbers[i]);
+        printf("%d \n", arr[i]);
     }
-
     // default return
     return 0;
 }
