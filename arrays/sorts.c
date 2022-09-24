@@ -2,13 +2,18 @@
 
 #define Main int main
 
-void shit(int *arr)
+void fillArr(int n, int arr[])
 {
-    arr[0] = 69;
-}
 
+    int random;
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = (rand(100 - 1)) + 1;
+    }
+}
 Main()
 {
+
     int arr[2] = {0, 1};
     shit(&arr);
     printf("%d", arr[0]);
