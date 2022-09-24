@@ -1,11 +1,17 @@
 #include <stdio.h>
 
-// sous programme
+#define Main int main
 
-// fonction main (programme principal ! )
-void main()
+void shit(int *arr)
 {
+    arr[0] = 69;
+}
 
-    int age = 20;
-    printf("%d \n", age);
+Main()
+{
+    int arr[2] = {0, 1};
+    shit(&arr);
+    printf("%d", arr[0]);
+    printf("\n %d", arr[1]);
+    return 0;
 }
