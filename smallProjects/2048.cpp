@@ -16,7 +16,9 @@ int getSize (int min , int max ){
 
 int main (){
     int n ; 
-
+    //define the matrix 
+    vector <vector<int>> gameGrid ; 
     
+     
     
 }
