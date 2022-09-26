@@ -5,6 +5,7 @@
 Main()
 {
 
-    printf("Test empty code ! \n");
+    printf("Test empty code ! \a");
+
     return 0;
 }
