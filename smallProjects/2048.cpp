@@ -13,12 +13,29 @@ int getSize (int min , int max ){
 }
 
 
+void printGrid (vector<vector<int>> gridSurf, int n ) {
+    for (int i = 0; i< n;i++) {
+        for (int j=0;j<n;i++) {
+            cout << gridSurf[i][j]  << " ";  
+        }
+        cout << endl; 
+    }
+}
+
 
 int main (){
     int n ; 
-    //define the matrix 
+    //declare the matrix 
     vector <vector<int>> gameGrid ; 
     
-     
+    cout << "Enter N ! " << endl ; 
+
+    n = getSize(3, 10) ; 
+    for (int i = 0; i< n;i++) {
+        for (int j = 0; j< n ; j++) {
+            gameGrid[i][j] = NULL;
+
+        }
+    }
     
 }
