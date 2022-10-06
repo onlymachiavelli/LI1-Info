@@ -23,6 +23,15 @@ void printGrid (vector<vector<int>> gridSurf, int n ) {
 }
 
 
+void initialGrid (vector <vector<int>> gridSurf, int n ) {
+for (int i = 0; i< n;i++) {
+        for (int j = 0; j< n ; j++) {
+            gameGrid[i][j] = 0;
+
+        }
+    }
+}
+
 int main (){
     int n ; 
     //declare the matrix 
@@ -31,11 +40,6 @@ int main (){
     cout << "Enter N ! " << endl ; 
 
     n = getSize(3, 10) ; 
-    for (int i = 0; i< n;i++) {
-        for (int j = 0; j< n ; j++) {
-            gameGrid[i][j] = NULL;
-
-        }
-    }
+    
     
 }
