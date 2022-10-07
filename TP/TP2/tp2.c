@@ -71,7 +71,7 @@ void ex_5_2()
     swapp = x;
     x = y;
     y = swapp;
-    printf("X = %d and Y = %d", x, y);
+    printf("X = %d and Y = %d \n", x, y);
 }
 void main()
 {
