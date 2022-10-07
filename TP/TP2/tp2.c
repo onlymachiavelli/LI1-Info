@@ -10,7 +10,7 @@ void ex_1_5()
 {
     printf("ESSTHS \n");
     printf("je suis en premiere annee ");
-    printf("License Informatique");
+    printf("License Informatique \n");
 }
 
 void ex_2_2()
@@ -78,7 +78,7 @@ void main()
 
     printf("Ex 1 \n");
     ex_1_2();
-    printf("Ex 2 \n");
+    printf("\nEx 2 \n");
     ex_1_5();
     printf("Ex 3 \n");
     ex_2_2();
