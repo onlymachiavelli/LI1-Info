@@ -74,4 +74,75 @@ void main()
     printf("%d \n", ((a && b) || (!0 && c)) && !d);
     printf("%d \n", ((a && b) || !0) && (c && (!d)));
 }
+ex 1.4 
 
+question 1 
+x=6      y= 6 res = 12 
+ x=7     y= 6 res = 12 
+ x=8     y= 6 res = 14
+ x=7     y= 6 res = 14
+ x=6     y= 6 res = 12
+ x=6     y= 6 res = 12
+
+
+question 2 
+
+question 3 
+#include <stdio.h>
+
+void main()
+{
+    int x, y, res;
+
+    x = y = 6;
+    res = x + y;
+    printf("x=%i \t y= %i res = %i \n ", x, y, res);
+    res = x++ + y;
+
+    printf("x=%i \t y= %i res = %i \n ", x, y, res);
+    res = ++x + y;
+    printf("x=%i \t y= %i res = %i \n ", x, y, res);
+    res = x-- + y;
+    printf("x=%i \t y= %i res = %i \n ", x, y, res);
+    res = --x + y;
+    printf("x=%i \t y= %i res = %i \n ", x, y, res);
+    res = x + y;
+    printf("x=%i \t y= %i res = %i \n ", x, y, res);
+}
+
+question 4 
+
+
+question  5 
+
+exer 1.5 
+
+question 1 
+
+
+
+question 2 
+
+#include <stdio.h>
+
+void main()
+{
+    int x, y, swapp;
+    printf("Enter X ! \n");
+    scanf("%d", &x);
+    printf("Enter Y! \n");
+    scanf("%d", &y);
+    printf("X = %d and Y = %d \n", x, y);
+    swapp = x;
+    x = y;
+    y = swapp;
+    printf("X = %d and Y = %d", x, y);
+}
+
+question 3 :
+Enter X ! 
+4
+Enter Y! 
+5
+X = 4 and Y = 5 
+X = 5 and Y = 4
