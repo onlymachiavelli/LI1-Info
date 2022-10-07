@@ -146,3 +146,8 @@ Enter Y!
 5
 X = 4 and Y = 5 
 X = 5 and Y = 4
+
+
+
+\0 -> Mark an end of a string 
+\a 
