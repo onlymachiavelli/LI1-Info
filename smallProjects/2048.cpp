@@ -26,7 +26,7 @@ void printGrid (vector<vector<int>> gridSurf, int n ) {
 void initialGrid (vector <vector<int>> gridSurf, int n ) {
 for (int i = 0; i< n;i++) {
         for (int j = 0; j< n ; j++) {
-            gameGrid[i][j] = 0;
+            gridSurf[i][j] = 0;
 
         }
     }
