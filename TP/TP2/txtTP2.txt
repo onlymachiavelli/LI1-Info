@@ -1,3 +1,59 @@
+ex1 :
+
+
+question 2 : 
+#include <stdio.h>
+
+void main()
+{
+    
+    printf("ESSTHS");
+}
+
+
+question 3 
+
+#include <stdio.h>
+
+void main()
+{
+    /*
+    Instruction d'affichage 
+        d'un message sur l'ecran 
+    */
+    printf("ESSTHS");
+    printf("ESSTHS");
+}
+
+
+question 45
+#include <stdio.h>
+
+void main()
+{
+    
+    printf("Je suis en premiere annee ");
+    printf("License Iformatique ");
+    //question 6
+    // \n : retour a la ligne ! 
+
+}
+
+
+
+
+ex 1.2
+question 2 
+
+#include <stdio.h>
+
+void main()
+{
+    printf("\nbonjour \0 ESSTHS");
+    printf("\nbonjour \aESSTHS");
+}
+
+ex1.3 
 #include <stdio.h>
 
 void main()
@@ -18,3 +74,4 @@ void main()
     printf("%d \n", ((a && b) || (!0 && c)) && !d);
     printf("%d \n", ((a && b) || !0) && (c && (!d)));
 }
+
