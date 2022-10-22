@@ -128,11 +128,3 @@ void main()
     ex_1_8();
 }
 
-#include <stdio.h>
-int main()
-{
-    char thing;
-    thing = getchar();
-
-    putchar(thing);
-}
