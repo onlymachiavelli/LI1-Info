@@ -63,64 +63,54 @@ void ex_4_3()
 void ex_5_2()
 {
 
-    int x, y, swapp;
-    printf("Enter X ! \n");
+    int x, y;
+    printf("Swapp Enter X ! \n");
     scanf("%d", &x);
     printf("Enter Y! \n");
     scanf("%d", &y);
     printf("X = %d and Y = %d \n", x, y);
-    swapp = x;
-    x = y;
-    y = swapp;
+    x = x * y;
+    y = x / y;
+    x = x / y;
     printf("X = %d and Y = %d \n", x, y);
 }
 
+void ex_1_6()
+{
 
-void ex_1_6 () {
+    float rayon;
+    printf("Enter the R \n");
+    scanf("%f", &rayon);
 
+    float per = 2 * PI * rayon, surf = rayon * rayon * PI;
 
-    float  rayon ; 
-    printf("Enter the R \n") ;
-    scanf("%f" , &rayon ) ; 
-
-    float per = 2 * PI *rayon , surf = rayon *rayon * PI ; 
-
-
-
-    printf("The perm is %f and the surface is %f" , per , surf ) ; 
-
- 
-
+    printf("The perm is %f and the surface is %f", per, surf);
 }
 
-void ex_1_7() {
+void ex_1_7()
+{
     float math, algo, exam, ds, moy;
-	printf("Enter the ds and the exam of math !  \n");
-	scanf("%f", &ds, &exam);
-	math = 0.4 * ds + 0.6 * exam;
-	printf("Enter the ds and exam  of algo !  \n");
-	scanf("%f", &ds, &exam);
-  algo = 0.4 * ds + 0.6 * exam;
+    printf("Enter the ds and the exam of math !  \n");
+    scanf("%f", &ds, &exam);
+    math = 0.4 * ds + 0.6 * exam;
+    printf("Enter the ds and exam  of algo !  \n");
+    scanf("%f", &ds, &exam);
+    algo = 0.4 * ds + 0.6 * exam;
 
+    moy = (math + algo) / 2;
+    printf("Th moy is : %f", moy);
+}
 
-  moy = (math + algo) /2 ; 
-  printf ("Th moy is : %f" , moy ) ;
-  
-  }
+void ex_1_8()
+{
+    char thing;
+    thing = getchar();
 
-
-  void ex_1_8 () {
-      char thing;
-	thing = getchar();
-
-	putchar(thing);
-	return 0;
-  }
+    putchar(thing);
+}
 void main()
 {
 
-    /*
-    
     printf("Ex 1 \n");
     ex_1_2();
     printf("\nEx 2 \n");
@@ -133,12 +123,16 @@ void main()
     ex_4_3();
     printf("Ex 6 \n");
     ex_5_2();
-   ex_1_6();
-   ex_1_7();
-   ex_1_8
-    compte rendu 23oct */
+    ex_1_6();
+    ex_1_7();
+    ex_1_8();
+}
 
-    
+#include <stdio.h>
+int main()
+{
+    char thing;
+    thing = getchar();
 
-
+    putchar(thing);
 }
