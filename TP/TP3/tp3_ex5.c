@@ -10,11 +10,11 @@ int main()
     scanf("%s", &plug);
     if (plug == 'p')
     {
-        printf("The result is %f", (r1 * r2 * r3) / (r1 * (r2 + r3) + r1 * r3));
+        printf("The result is %lf", (r1 * r2 * r3) / (r1 * (r2 + r3) + r1 * r3));
     }
     else
     {
-        printf("The result is %f", r1 + r2 + r3);
+        printf("The result is %lf", r1 + r2 + r3);
     }
     return 0;
 }
