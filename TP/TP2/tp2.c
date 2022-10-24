@@ -94,7 +94,7 @@ void ex_1_7()
     scanf("%f", &ds, &exam);
     math = 0.4 * ds + 0.6 * exam;
     printf("Enter the ds and exam  of algo !  \n");
-    scanf("%f", &ds, &exam);
+    scanf("%f %f", &ds, &exam);
     algo = 0.4 * ds + 0.6 * exam;
 
     moy = (math + algo) / 2;
@@ -127,4 +127,3 @@ void main()
     ex_1_7();
     ex_1_8();
 }
-
