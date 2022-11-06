@@ -43,4 +43,12 @@ def triZawali(n: int, arr, err, gadem):
                 gadem[i], gadem[i+1] = gadem[i+1], gadem[i]
 
 
+def expensive(n: int, arr, err, gadem):
+    res = np.array(n, {})
+    m = 0
+
+    for i in range(n):
+        name = arra[]
+
+
 code = np.array()
