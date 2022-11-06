@@ -36,18 +36,20 @@ def triZawali(n: int, arr, err, gadem):
                 err[i], err[i+1] = err[i+1], err[i]
                 arr[i], arr[i+1] = arr[i+1], arr[i]
                 gadem[i], gadem[i+1] = gadem[i+1], gadem[i]
+                check = False
+
+    print(arr, err, gadem)
 
 
 def exist(n, arr, model: str) -> bool:
     for i in range(n):
-        print(arr)
         if arr[i]["model"] == model:
             return True
     return False
 
 
 def expensive(n: int, arr, err, gadem):
-    res = np.zeros(n, dtype=object)
+    res = np.zeros(n, dtype={})
     m = 0
     for i in range(n):
         select = {
@@ -72,12 +74,12 @@ def expensive(n: int, arr, err, gadem):
 
 
 print("Enter the number of computers ")
-n = size(3, 10)
 
-code = np.zeros(n, dtype=int)
-price = np.zeros(n, dtype=float)
-model = np.zeros(n, dtype=str)
+#fillArr(n, code, model, price)
+n = 6
+code = [2504, 2230, 1514, 3210, 1140, 1026]
+model = ["Dell", "Hp", "Asus", "Hp", "Asus", "Asus"]
+price = [1500.5, 1925.3, 2015.0, 2000.5, 1200.5, 1795.5]
 
-fillArr(n, code, model, price)
 triZawali(n, code, model, price)
 expensive(n, code, model, price)
