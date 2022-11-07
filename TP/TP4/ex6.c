@@ -21,5 +21,9 @@ int main()
     printf("Enter the value ! \n");
     scanf("%d", &v);
 
+    for (int u = i; u < 10; u++)
+    {
+    }
+
     return 0;
 }
