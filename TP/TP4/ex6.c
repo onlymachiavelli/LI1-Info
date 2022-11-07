@@ -21,9 +21,18 @@ int main()
     printf("Enter the value ! \n");
     scanf("%d", &v);
 
-    for (int u = i; u < 10; u++)
-    {
-    }
+    int dec = arr[i];
+    arr[i] = v;
 
+    for (int u = i + 1; u < 9; u++)
+    {
+        arr[u] = dec;
+        dec = arr[u + 1];
+        arr[u + 1] = dec;
+    }
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%d ,", arr[i]);
+    }
     return 0;
 }
