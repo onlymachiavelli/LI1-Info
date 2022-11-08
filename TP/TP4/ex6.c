@@ -24,11 +24,11 @@ int main()
     int dec = arr[i];
     arr[i] = v;
 
-    for (int u = i + 1; u < 9; u++)
+    for (int u = i + 1; u < 10; u++)
     {
+        v = arr[u];
         arr[u] = dec;
-        dec = arr[u + 1];
-        arr[u + 1] = dec;
+        dec = v;
     }
     for (int i = 0; i < 10; i++)
     {
