@@ -12,8 +12,11 @@ int main()
 {
 
     int n;
-    printf("Enter the Length \n");
-    scanf("%d", &n);
+    do
+    {
+        printf("Enter the Length \n");
+        scanf("%d", &n);
+    } while (n <= 0 || n > 50);
 
     int arr[n];
     for (int i = 0; i < n; i++)
