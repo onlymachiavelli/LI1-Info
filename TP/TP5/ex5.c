@@ -88,8 +88,9 @@ int main()
         {
             printf("OUI");
         }
-        else printf("NON");
     }
+    else
+        printf("NON");
 
     return 0;
 }
