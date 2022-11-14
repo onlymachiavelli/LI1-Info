@@ -1,30 +1,34 @@
-#include <bits/stdc++.h>
-
+#include <bits/stdc++.h> 
 using namespace std; 
 
 
-struct Node{ 
+struct Node{
+    int data ; 
+    struct Node *next ; 
+};
 
 
-    int head; 
-    struct Node*next ; 
-} ; 
+
+
 int main () {
-    struct Node*TopG ; 
-    struct Node*data; 
 
-    TopG = (struct Node *) malloc(sizeof(struct Node)) ; 
-    data = (struct Node*) malloc(sizeof(struct Node)) ; 
-    TopG->head = 1; 
-    TopG->next->head=2; 
-    TopG->next->next->head = 3 ; 
+    struct Node*head= NULL ;
+    head= (struct Node*) (malloc(sizeof(struct Node))) ; 
+    struct Node * headd; 
 
-    data->head = TopG->head; 
-    while (data) {
-        printf("%dhello world" , data->head) ; 
-        data->head = TopG->next->head;
+    head->data = 1 ; 
+   head->next->data =2 ; 
+   head->next->next->data = 3 ; 
 
-
+    headd = head; 
+    while (headd != NULL) {
+        printf("%d \n ", headd->data) ; 
+        headd = headd->next ; 
+    
     }
-    return 0 ; 
-} 
+    
+    
+
+
+    return 0; 
+}
