@@ -52,17 +52,44 @@ int main()
     // the diagonals
 
     // diagonal left
-    int ele;
-
-    for (int i = 0; i < 5; i++)
+    int ele = matrix[0][0];
+    printf("%d ,", matrix[0][0]);
+    for (int i = 1; i < 5; i++)
     {
-
+        if (ele != matrix[i][i])
+        {
+            check = 0;
+        }
         printf("%d , ", matrix[i][i]);
     }
+    printf("\n");
 
-    int j = 4;
-    for (int i = 0; i < 5; i++)
+    int j = 3;
+    printf("%d , ", matrix[0][4]);
+    ele = matrix[0][4];
+    for (int i = 1; i < 5; i++)
     {
+        if (ele != matrix[i][j])
+        {
+            check = 0;
+        }
+        printf("%d ,", matrix[i][j]);
     }
+
+    printf("\n");
+    if (check)
+    {
+        if (matrix[0][0] != matrix[0][4])
+        {
+            check = 0;
+            printf("NON");
+        }
+        else
+        {
+            printf("OUI");
+        }
+        else printf("NON");
+    }
+
     return 0;
 }
