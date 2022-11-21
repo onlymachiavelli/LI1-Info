@@ -33,12 +33,11 @@ int main()
     {
         if (arr[i] == 0)
         {
-            arr[i] = arr[i + 1];
-            for (int j = i + 1; j < n - 1; j++)
+
+            for (int j = i; j < n; j++)
             {
-                swapp = arr[j];
+
                 arr[j] = arr[j + 1];
-                arr[j + 1] = swapp;
             }
             --newLength;
         }

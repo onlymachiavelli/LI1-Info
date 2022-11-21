@@ -74,6 +74,7 @@ int main()
             check = 0;
         }
         printf("%d ,", matrix[i][j]);
+        j--;
     }
 
     printf("\n");
