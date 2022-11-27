@@ -3,7 +3,15 @@
 int main()
 {
 
-    int matrix[5][5];
+    int matrix[5][5] = {
+        {6, 2, 3, 5, 6},
+        {4, 6, 2, 6, 1},
+        {1, 3, 6, 7, 9},
+        {1, 6, 3, 6, 8},
+        {6, 0, 1, 4, 6}
+
+    };
+    /*
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)
@@ -13,6 +21,7 @@ int main()
         }
     }
 
+    */
     // printing the matrix
     for (int i = 0; i < 5; i++)
     {
