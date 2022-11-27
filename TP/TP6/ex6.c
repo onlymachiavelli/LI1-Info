@@ -5,7 +5,7 @@ int main()
 {
 
     char string[100];
-    char voy[6] = "aeiouy";
+    char voy[12] = "aeiouyAEIOUY";
     do
     {
         printf("Enter the String ! \n");
@@ -16,13 +16,13 @@ int main()
     int count = 0;
     for (int i = 0; i < strlen(string); i++)
     {
-        for (int j = 0; j < 6; j++)
+        for (int j = 0; j < 12; j++)
         {
             if (string[i] == voy[j])
                 ++count;
         }
     }
 
-    printf("The total number of voys is : %d", count);
+    printf("for STRING = %s the value of S is : %d", string, count);
     return 0;
 }
