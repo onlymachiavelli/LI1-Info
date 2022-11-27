@@ -27,7 +27,6 @@ int main()
     printArr(n, arr);
 
     int newLength = n;
-    int swapp;
     // looping searching for zeros
     for (int i = 0; i < n; i++)
     {
