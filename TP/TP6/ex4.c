@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 int main()
 {
     char verb[20];
@@ -16,7 +15,22 @@ int main()
     }
 
     while (!check);
+    char v[6][3] = {
+        "e",
+        "es",
+        "e",
+        "ons",
+        "ez",
+        "ent"};
 
-    // The process !
+    for (int i = 0; i < 6; i++)
+    {
+        printf("\n");
+        for (int j = 0; j < strlen(verb) - 2; j++)
+        {
+            printf("%c", verb[j]);
+        }
+        printf("%s", v[i]);
+    }
     return 0;
 }
