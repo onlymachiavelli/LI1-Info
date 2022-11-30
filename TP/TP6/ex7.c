@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
+
+
+
 int main()
 {
 
@@ -12,8 +15,7 @@ int main()
     } while (strlen(line) == 0);
 
     char voy[12] = "aeiouyAEIOUY";
-    int check;
-    char newString[100] = "";
+    int check, length = strlen(line);
     for (int i = 0; i < strlen(line); i++)
     {
         check = 0;
@@ -21,14 +23,14 @@ int main()
         {
             if (line[i] == voy[j])
             {
-                check = 1;
+                for (int k = i; k < strlen(line); k++)
+                {
+                   line[k] = line[k+1] ;  
+                }
             }
         }
-        if (!check)
-        {
-            newString += line[i];
-        }
     }
+    printf(line) ; 
 
     return 0;
 }
