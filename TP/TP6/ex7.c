@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
-
-
 int main()
 {
 
@@ -25,12 +22,12 @@ int main()
             {
                 for (int k = i; k < strlen(line); k++)
                 {
-                   line[k] = line[k+1] ;  
+                    line[k] = line[k + 1];
                 }
             }
         }
     }
-    printf(line) ; 
+    printf(line);
 
     return 0;
 }

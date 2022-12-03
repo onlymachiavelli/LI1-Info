@@ -12,9 +12,9 @@ int main()
     int count;
     do
     {
+        count = 0;
         printf("Enter The Sentence ");
         gets(line);
-        printf(line);
         for (int i = 0; i < strlen(line); i++)
         {
             // counting for spaces
