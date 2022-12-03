@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main()
 {
@@ -10,6 +11,7 @@ int main()
 
     int i = 0;
     int check = 1;
+
     while (i < strlen(word) && word[i] == word[strlen(word) - i - 1])
     {
         ++i;
