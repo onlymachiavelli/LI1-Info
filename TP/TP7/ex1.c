@@ -8,6 +8,6 @@ int isEven(int number)
 int main()
 {
 
-    printf("%d", isEven(5));
+    printf("%d \n%d", isEven(6), isEven(5));
     return 0;
 }
