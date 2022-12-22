@@ -33,10 +33,11 @@ void ZAWALI_SORT(int n , vector <CPU> PROCESSORS){
     while (!check) {
         check = true ; 
         for (int i = 0; i< n-1 ; i++) {
-            if (PROCESSORS[i].arrival ? PROCESSORS[i].arrival[i+1]) {
+            if (PROCESSORS[i].arrival >  PROCESSORS[i].arrival[i+1]) {
                 swap = PROCESSORS[i] ; 
                 PROCESSORS[i] = PROCESSORS[n-i-1] ; 
                 PROCESSORS[n-i-1] = swap ; 
+                check = false ; 
             }
         }
     }
@@ -52,7 +53,6 @@ int main () {
     CPU_NUMBER = getData() ; 
     CPU def ; 
     unsigned int i = n ; 
-    float Res = 0 ; 
 
     while (i--) {
         cout << "Enter the Name of the CPU ! " << endl ; 
@@ -63,7 +63,15 @@ int main () {
         def.arrival = getData() ; 
         PROCESSORS.push_back(def) ; 
     }
-    //sorting 
+    //sorting the shit out of it 
+    ZAWALI_SORT(n, &PROCESSORS ) ; 
+    float Res = PROCESSORS[0].duration
+    for (int i =0 ; i  < n ; i++) {
+        Res += PROCESSORS[i].duration / n ; 
+    }   
+
+    
+
     
     return 0 ; 
 }
