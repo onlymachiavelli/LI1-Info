@@ -26,6 +26,21 @@ string notEmpty () {
     }
     return notEmpty() ; 
 }
+
+void ZAWALI_SORT(int n , vector <CPU> PROCESSORS){
+    bool check = false ; 
+    CPU swap ; 
+    while (!check) {
+        check = true ; 
+        for (int i = 0; i< n-1 ; i++) {
+            if (PROCESSORS[i].arrival ? PROCESSORS[i].arrival[i+1]) {
+                swap = PROCESSORS[i] ; 
+                PROCESSORS[i] = PROCESSORS[n-i-1] ; 
+                PROCESSORS[n-i-1] = swap ; 
+            }
+        }
+    }
+}
 int main () {
     
 
@@ -48,6 +63,7 @@ int main () {
         def.arrival = getData() ; 
         PROCESSORS.push_back(def) ; 
     }
+    //sorting 
     
     return 0 ; 
 }
