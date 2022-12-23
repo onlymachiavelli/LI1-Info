@@ -27,7 +27,7 @@ string notEmpty () {
     return notEmpty() ; 
 }
 
-void ZAWALI_SORT(int n , vector <CPU> PROCESSORS){
+void ZAWALI_SORT(int n , vector <CPU> *PROCESSORS){
     bool check = false ; 
     CPU swap ; 
     while (!check) {
@@ -46,10 +46,12 @@ int main () {
     
 
     vector <CPU> PROCESSORS ; 
-    unsigned int n , CPU_NUMBER; 
+    unsigned int n , CPU_NUMBER, START; 
     cout << "How many datas are they ? " << endl; 
     n = getData() ; 
     cout << "How many CPU are they ? " << endl ; 
+    cout << "Enter your starting point !" << endl ; 
+    cin >> START; 
     CPU_NUMBER = getData() ; 
     CPU def ; 
     unsigned int i = n ; 
@@ -65,12 +67,14 @@ int main () {
     }
     //sorting the shit out of it 
     ZAWALI_SORT(n, &PROCESSORS ) ; 
-    float Res = PROCESSORS[0].duration
-    for (int i =0 ; i  < n ; i++) {
-        Res += PROCESSORS[i].duration / n ; 
+    float Res = abs(PROCESSORS[0].duration - START) / n ; 
+    START = PROCESSORS[0] ; 
+    for (int i =1 ; i  < n ; i++) {
+        Res += abs(PROCESSORS[i].duration - START) / n ;
+        START = PROCESSORS[i] ; 
     }   
 
-    
+
 
     
     return 0 ; 
