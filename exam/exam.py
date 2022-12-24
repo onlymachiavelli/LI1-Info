@@ -22,7 +22,6 @@ while (True) :
 
 
 
-
 index = 0 
 check = True 
 while (index < len(word) and firstSpace(index , word) != -1) :
