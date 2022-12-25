@@ -1,0 +1,12 @@
+.DATA 
+
+
+.CODE 
+
+MOV AH, 1H 
+INT 21H 
+MOV DL, AL
+
+MOV AH, 2H 
+INT 21H
+END
