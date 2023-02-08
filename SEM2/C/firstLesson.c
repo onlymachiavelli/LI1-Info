@@ -1,16 +1,12 @@
 #include <stdio.h>
+
 int main () {
 
-
-    int n ; 
-    printf("Enter N ! \n") ; 
-    scanf("%i", &n) ;
-    printf("\n");
-     for (int i = 0; i< n; i++) {
-        printf("%i \n", i) ; 
-
+    int n = 5, counter = 0 ; 
+    for (int i =0; i< n ; i++) {
+        for (int j=0;j<i;j++) {
+            ++counter ; 
+        }
     }
-
-
-    return 0; 
+    return 0 ; 
 }
