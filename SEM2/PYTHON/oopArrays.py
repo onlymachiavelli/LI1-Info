@@ -1,19 +1,19 @@
 class Arrays:
     def __init__(self, array, length) :
-        if len(self.array) != length :
+        if len(array) != length :
             print("Error: length of array is not equal to length")
             exit() 
         #checking the type of the given array ! 
         try :
             for i in range (length) :
-                self.array[i] = self.array[i]
+                array[i] = array[i]
         except :
             print("Error: the given thing is not an array ! ")
             exit()
-
-
         self.array = array
         self.length = length
+
+
 
     def initZero(self) :
         for i in range(self.length):
@@ -45,5 +45,32 @@ class Arrays:
         self.length += 1
     def printArray(self):
         for i in range(self.length):
-            print(self.array[i])
+            print(self.array[i], end=",")
+        print()
     
+
+#give me not sorted array 
+array = [3,4,8,2,0,-9] 
+length = len(array)
+#init the object
+myArray = Arrays(array, length)
+#sort the array
+myArray.bubSort()
+#print the array
+myArray.printArray()
+
+#insert data at the end of the array
+myArray.insertData()
+myArray.printArray()
+
+#delete data at index 3
+myArray.deleteData(3)
+myArray.printArray()
+
+#insert data at index 2
+myArray.insertDataAt(2, 100)
+myArray.printArray()
+
+#init the array with zeros
+myArray.initZero()
+myArray.printArray()
