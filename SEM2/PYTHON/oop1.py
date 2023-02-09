@@ -14,6 +14,10 @@ class Person :
         print(self.sex)
         
 
+
+
+
+
 Alaa = Person("Alaa", "Barka", "male", 1.76, 20)
 
 print(Alaa.printAllDatas())
