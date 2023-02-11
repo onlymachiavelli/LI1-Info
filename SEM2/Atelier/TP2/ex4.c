@@ -34,7 +34,7 @@ int main () {
             for (int j =i; j< length-1; j++) {
                 *secp = *(secp+1) ;
                 secp++ ;
-                             
+
             }
             --newLength ; 
 
