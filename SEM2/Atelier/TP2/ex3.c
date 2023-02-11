@@ -2,25 +2,27 @@
 
 
 int main () {
-
-
     int n ; 
-    int arr[n] ; 
-    printf("Enter n \n");
-    scanf("%d", &n);
-    for (int i =0; i< n ;i++) {
-        scanf("%d", &arr[i]);
+    printf("Enter The length  \n") ; 
+    scanf("%d", &n) ;
+    int arr[n] ;
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter The %d element \n", i+1) ; 
+        scanf("%d", &arr[i]) ; 
     }
-
-
-
-
-    int *p = arr , sum=0;
-    for (int i =0; i< n ;i++) {
+    
+    //holds the first elements ! 
+    
+    int *p = arr ; 
+    int sum = 0 ; 
+    for (int i = 0; i < n; i++)
+    {
         sum += *p ; 
-        p++ ;
+        p++ ; 
     }
+    printf("sum = %d", sum) ;
+    
 
-    printf("sum = %d", sum );
-    return 0; 
+    return 0 ; 
 }
