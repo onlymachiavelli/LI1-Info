@@ -26,10 +26,10 @@ int main () {
     int x ; 
     printf("Enter the cancelled element ! \n") ; 
     scanf("%d", &x) ;
-    int *xPointer = &x ; 
+
     int newLength = length; 
     for (int i =0; i< length; i++) {
-        if (*xPointer == *arrPointer) {
+        if (x == *arrPointer) {
             int *secp = arrPointer ; 
             for (int j =i; j< length-1; j++) {
                 *secp = *(secp+1) ;
@@ -41,7 +41,6 @@ int main () {
         }
         arrPointer++ ; 
     }
-    //print the array 
     for (int i = 0; i < newLength; i++)
     {
         printf("%d ", arrPointer[i]) ; 
