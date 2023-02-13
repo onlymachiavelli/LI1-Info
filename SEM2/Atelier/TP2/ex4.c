@@ -1,51 +1,55 @@
 #include <stdio.h> 
+int Interval() {
+    int n ; 
+    printf("Enter The number ! \n") ; 
+    scanf("%d" , &n); 
+    if (n > 0) return n ; 
+    return Interval () ; 
+}
+
 
 int main () {
-
-
-    int length ; 
-    printf("Enter The length  \n") ;
-    scanf("%d", &length) ;
-    int arr[length] ;
-    int *arrPointer = arr ; 
-    //fill the array ! 
-
-    for (int i = 0; i < length; i++)
-    {
-        printf("Enter The %d element \n", i+1) ; 
-        scanf("%d", &arr[i]) ; 
+    int n = Interval();
+    int arr[n] ; 
+    int *PP = arr ; 
+    while (PP < arr + n) {
+        printf("Enter a data ! "); 
+        scanf("%d", PP) ; 
+        ++PP ; 
     }
-
-      for (int i = 0; i < length; i++)
-    {
-        printf("%d ", arrPointer[i]) ; 
-         
-    } 
-    printf("\n") ; 
-
+    int *P = arr ; 
+    while (P < arr+n) {
+        printf("%d , " , *P) ; 
+        ++P ; 
+    }
+    printf("\n");
     int x ; 
-    printf("Enter the cancelled element ! \n") ; 
-    scanf("%d", &x) ;
+    printf("Enter the targetted Data ! \n") ; 
+    scanf("%d" , &x) ;
 
-    int newLength = length; 
-    for (int i =0; i< length; i++) {
-        if (x == *arrPointer) {
-            int *secp = arrPointer ; 
-            for (int j =i; j< length-1; j++) {
-                *secp = *(secp+1) ;
-                secp++ ;
+    //looping from the back ! 
+    int count = 0 ; 
 
+
+    int *Po = arr ; 
+    while (Po < arr + n) {
+        if (*Po == x ) {
+
+            int *P1 = Po ; 
+            while (P1 < arr + n - 1) {
+                *P1 = *(P1+1) ; 
+                ++P1 ; 
             }
-            --newLength ; 
-
+            ++count ; 
         }
-        arrPointer++ ; 
-    }
-    for (int i = 0; i < newLength; i++)
-    {
-        printf("%d ", arrPointer[i]) ; 
-         
+        ++Po ;
     }
 
-    return 0; 
+    n = n-count  ; 
+    int *Pr = arr ; 
+    while (Pr < arr+n) {
+        printf("%d , " , *Pr) ; 
+        ++Pr ; 
+    }
+    return 0 ; 
 }
