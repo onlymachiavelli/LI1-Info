@@ -6,22 +6,24 @@ int main () {
     printf("Enter The length  \n") ; 
     scanf("%d", &n) ;
     int arr[n] ;
-    for (int i = 0; i < n; i++)
+    int *p = arr ; 
+    while(p < arr+n)
     {
-        printf("Enter The %d element \n", i+1) ; 
-        scanf("%d", &arr[i]) ; 
+        printf("Enter The element \n") ; 
+        scanf("%d", p) ;  
+        ++p ; 
     }
     
     //holds the first elements ! 
     
-    int *p = arr ; 
     int sum = 0 ; 
-    for (int i = 0; i < n; i++)
-    {
-        sum += *p ; 
-        p++ ; 
+    int *p1 = arr;
+    while (p1 < arr + n) {
+        sum += *p1 ; 
+        p1++ ; 
     }
-    printf("sum = %d", sum) ;
+
+    printf("The Sum is : %d" , sum) ; 
     
 
     return 0 ; 

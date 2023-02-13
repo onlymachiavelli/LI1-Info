@@ -2,6 +2,7 @@
   "files.associations": {
     "strings.h": "c",
     "iostream": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "TRY.C": "cpp"
   }
 }
