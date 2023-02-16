@@ -22,9 +22,6 @@ int main () {
         --P2 ;
     } 
     printf("The word is palindrome ! \n") ;
-    
-    
-
     return 0 ;
 
 }
