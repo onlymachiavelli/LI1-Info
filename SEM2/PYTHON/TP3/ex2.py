@@ -14,5 +14,5 @@ while (True) :
     else :
         break
 moy /= count 
-print(f"Moyenne of {count} subjects = {moy}")
+print(f"Moyenne of {count} subjects = {round(moy, 2)}")
 
