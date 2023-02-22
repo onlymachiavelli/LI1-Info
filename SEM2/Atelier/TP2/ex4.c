@@ -27,7 +27,6 @@ int main () {
     printf("Enter the targetted Data ! \n") ; 
     scanf("%d" , &x) ;
 
-    //looping from the back ! 
     int count = 0 ; 
 
 
@@ -53,3 +52,4 @@ int main () {
     }
     return 0 ; 
 }
+

@@ -14,7 +14,6 @@ int main () {
         ++p ; 
     }
     
-    //holds the first elements ! 
     
     int sum = 0 ; 
     int *p1 = arr;
@@ -28,3 +27,4 @@ int main () {
 
     return 0 ; 
 }
+
