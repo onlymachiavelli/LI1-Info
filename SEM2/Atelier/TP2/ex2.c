@@ -5,14 +5,11 @@ int main () {
 
     char a, b ;
     printf("Enter A \n");
-    a = getchar() ; 
 
-    //add a getchar() after each scanf("%d") so i can read the second character ! 
-    scanf("%d") ; 
+    scanf(" %c", &a) ; 
 
     printf("Enter B \n");
-    //getc
-    b = getchar(); 
+    scanf(" %c", &b) ; 
 
 
     char *p1 = &a, *p2=&b;
@@ -22,10 +19,6 @@ int main () {
     
     printf("A = %c \n", a);
     printf("B = %c \n", b);
-
-    
-
-    
-
     return 0; 
 }
+
