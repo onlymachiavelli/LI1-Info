@@ -1,17 +1,17 @@
 #include  <stdio.h>
 
 
-typedef struct  person {
+ struct  person {
     char *name ;
     char *lname; 
     char *date ; 
 
     char *mat; 
-}person;
+};
 int main () {
 
 
-    person p ; 
+    struct person p ; 
     p.name = "Amer"; 
     p.lname = "Salem" ;
     p.date = "03/04/1998";
