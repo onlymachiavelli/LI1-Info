@@ -1,40 +1,64 @@
 #include <stdio.h>
 #include <string.h>
-#define MAX_LENGTH 50
 
+int isIn(char target[50] ,char o) {
+    for (int i=0;i<strlen(target);i++) {
+        if (target[i] == o) return 1 ; 
+    }
+    return 0;
+}
 int main () {
 
+    //define the two strings    
+    char str1[50] ;
+    char str2[50];
+    char used[50];
+    int l= 0;
+    //get the strings 
+    scanf("%s", &str1); 
+    scanf("%s", &str2);
 
-    //reading the strings 
-    char word1[MAX_LENGTH] ; 
-    char word2[MAX_LENGTH] ; 
-    printf("Enter the word 1 \n") ; 
-    scanf("%s", &word1 ); 
-    printf("Enter the word 2 \n") ; 
-    scanf("%s", &word2 ); 
+    char *st1= str1;
 
-    char *P1= word1 ; 
-    int find = 0; 
-    while (P1<word1+strlen(word1)){
-         char *P2= word2; 
-        while (P2<word2+strlen(word2)) {
-            find = *P1==*P2 ; 
-            if (find) {
-                //remove the character 
-                char *P3 = P2;
-                while (P3<word2+strlen(word2)){
-                    *P3 = *(P3+1); 
-                    P3++; 
-                }
-                break;
+    int found = 0;
+    while (*st1 != '\0') {
+        char *st2 = str2; 
+        while (*st2 != '\0') {
+            if (*st2 == *st1 && !isIn(used, *st1)) { 
+                found = 1 ;
+                break ; 
+            }
+            ++st2;
+            
+        }
+        if (found) {
+            used[l] = *st1;
+            ++l;
+            *st1=' '; 
+            found = 0;
+        }
+        ++st1; 
+        
+    }
+    char weird[50] ;
+    strcpy(weird, str1);
+    int length = strlen(weird); 
+    char *w=weird;
+    while (w <weird+strlen(weird) ) {
+        if (*w==' ') {
+            --length; 
+            char *next = w+1;
+            while (next < weird + strlen(weird)) {
+                *(next-1) = *next; 
+                ++next; 
 
             }
         }
+        ++w;
     }
-    //print the result 
-    printf("The word 1 is %s \n", word1);
-    printf("The word 2 is %s \n", word2);
+    weird[length+1] = '\0';
+    strcpy(str1, weird) ; 
+    printf("%s", str1) ;
+
     return 0;
-
-
 }
