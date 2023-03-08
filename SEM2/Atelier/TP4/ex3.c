@@ -73,26 +73,8 @@ int main () {
     int n = 2 ; 
 
     BUS busses[n];
-    //addBusses(n, busses);
-    busses[0].num=42069;
-    busses[1].num=5150;
-
-    strcpy(busses[0].begin, "Nabeul") ; 
-    strcpy(busses[0].end, "Tunis") ; 
-    busses[0].beginT.hour = 12;
-    busses[0].beginT.minute= 15;
-    busses[0].beginT.sec=00;
-    busses[0].endT.hour = 15;
-    busses[0].endT.minute=20;
-    busses[0].endT.sec=0;
-    strcpy(busses[1].begin, "Sousse") ; 
-    strcpy(busses[1].end, "Tunis") ; 
-    busses[1].beginT.hour = 15;
-    busses[1].beginT.minute= 30;
-    busses[1].beginT.sec=00;
-    busses[1].endT.hour = 18;
-    busses[1].endT.minute=20;
-    busses[1].endT.sec=0;
+    addBusses(n, busses);
+    
     TIME begin , end ; 
     begin.hour= 12; 
     begin.minute = 15  ; 
@@ -113,3 +95,4 @@ int main () {
 
     return 0 ; 
 }
+

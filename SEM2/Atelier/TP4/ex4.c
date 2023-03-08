@@ -1,33 +1,34 @@
-#include <stdio.h>
-
-
-
-
-typedef struct {
-    int x, y; 
-
-}POINT;
-
-
-void fillPoint(POINT p) {
-    printf("Enter the x and y of the point ! \n") ;
-    scanf("%d %d", &p.x, &p.y);
+typedef struct{
+float x;
+float y;
+}point;
+void saisir(point *p){
+printf("donner abscisse:");
+scanf("%f",&(*p).x);
+printf("donner ordonnée:");
+scanf("%f",&(*p).y);
 }
-
-void printPoint(POINT p) {
-    printf("The point is (%d, %d) \n", p.x, p.y);
+void afficher(point p){
+printf("p=(%f,%f)",p.x,p.y);
 }
-
-void Transi(POINT p ) {
-    //replace point to another point 
-    int temp = p.x;
-    
-
-    
+void deplacer(point *p,float dx,float dy){
+(*p).x+=dx;
+(*p).y+=dy;
 }
-int main () {
-    POINT p1, p2;
-
-
-    return 0 ; 
+point milieu(point p1,point p2){
+point pm;
+pm.x=((p1.x)+(p2.x))/2;
+pm.y=((p1.y)+(p2.y))/2;
+return(pm);
+}
+int main(){
+point x;
+saisir(&x);
+afficher(x);
+point A={6.5,2.3};
+point B={-9,8.5};
+deplacer(&B,3.0,8.0);
+point m;
+m=milieu(A,B);
+afficher(m);
 }
