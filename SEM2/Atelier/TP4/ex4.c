@@ -1,34 +1,61 @@
+#include <stdio.h>
+
+
 typedef struct{
-float x;
-float y;
-}point;
-void saisir(point *p){
-printf("donner abscisse:");
-scanf("%f",&(*p).x);
-printf("donner ordonnée:");
-scanf("%f",&(*p).y);
+    float x,y; 
+
+}POINT;
+
+void fillPoint (POINT *p){
+    printf("Enter x \n"); 
+    scanf("%f", &(p->x));
+    printf("Enter y \n");
+    scanf("%f", &(p->y));
+
+    //clean the buffer 
+
+    getchar();    
 }
-void afficher(point p){
-printf("p=(%f,%f)",p.x,p.y);
+
+void print(POINT p){
+    printf("The point is (%f, %f) \n", p.x, p.y);
 }
-void deplacer(point *p,float dx,float dy){
-(*p).x+=dx;
-(*p).y+=dy;
+
+void Replace (POINT *p , float a, float b)  {
+    p->x += a;
+    p->y += b; 
 }
-point milieu(point p1,point p2){
-point pm;
-pm.x=((p1.x)+(p2.x))/2;
-pm.y=((p1.y)+(p2.y))/2;
-return(pm);
+
+POINT Mid(POINT p, POINT w){
+
+    POINT mid; 
+    mid.x = (p.x + w.x)/2;
+    mid.y = (p.y + w.y)/2; 
+    return mid; 
 }
-int main(){
-point x;
-saisir(&x);
-afficher(x);
-point A={6.5,2.3};
-point B={-9,8.5};
-deplacer(&B,3.0,8.0);
-point m;
-m=milieu(A,B);
-afficher(m);
+
+int main () {
+
+    //enter a point 
+    POINT p, w;
+    fillPoint(&p);
+    fillPoint(&w);
+
+    //replace
+    Replace(&w, 3, 8);
+    //middle 
+    POINT mid = Mid(p, w);
+    //print
+    printf("The A point is : ");
+    print(p);
+    printf("\nThe B point is : ");
+    print(w);
+    printf("\nThe middle point is : ");
+    print(mid);
+
+
+
+
+    return 0; 
 }
+
