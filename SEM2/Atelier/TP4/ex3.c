@@ -44,7 +44,7 @@ void printBus(int n , BUS busses[n], TIME begin , TIME end, char BEGIN[50], char
     if (strcmp(busses[i].begin, BEGIN) == 0 && strcmp(busses[i].end, END) == 0 && 
         busses[i].beginT.hour == begin.hour && busses[i].beginT.minute == begin.minute && busses[i].beginT.sec == begin.sec &&
         busses[i].endT.hour == end.hour && busses[i].endT.minute == end.minute && busses[i].endT.sec == end.sec) {
-        printf("Found one\n");
+        printf("The bus number is %d and it starts from %s and ends in %s and it starts at %d:%d:%d and it ends at %d:%d:%d \n", busses[i].num, busses[i].begin, busses[i].end, busses[i].beginT.hour, busses[i].beginT.minute, busses[i].beginT.sec, busses[i].endT.hour, busses[i].endT.minute, busses[i].endT.sec);
     }
 }
 }
@@ -100,7 +100,7 @@ int main () {
     end.hour = 15; 
     end.minute = 20; 
     end.sec = 0;
-    print(2, busses) ; 
+    //print(2, busses) ; 
     printBus(2 , busses, begin, end ,"Nabeul", "Tunis");
 
     begin.hour = 15;
