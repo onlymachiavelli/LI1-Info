@@ -1,37 +1,46 @@
 #include <stdio.h>
+#include <stdlib.h>
 
+typedef struct node {
+    int data;
+    struct node *next;
+} NODE;
 
-typedef struct {
-    int head ; 
-    NODE *next ; 
-}NODE;
+NODE *fill(int n) {
+    NODE *head = NULL;
+    NODE *prev_node = NULL;
+    int data;
 
+    for (int i = 0; i < n; i++) {
+        printf("Enter data: ");
+        scanf("%d", &data);
+        NODE *new_node = (NODE *)malloc(sizeof(NODE));
+        new_node->data = data;
+        new_node->next = NULL;
 
+        if (prev_node != NULL) {
+            prev_node->next = new_node;
+        }
+        else {
+            head = new_node;
+        }
 
-NODE *fill (int n) {\
-    //allocating the list 
-    NODE *node = (NODE*) malloc(sizeof(NODE*)) ; 
-    node->head = 0; 
-    node->next = NULL ; 
-    int e ;
-    for (int i = 0; i<n;i++) {
-        printf("Enter data ! \n") ; 
-        scanf("%d", &e) ; 
-        NODE*tmp= (NODE*)malloc(sizeof(NODE*)) ; 
-        tmp->head = e; 
-        tmp->next = node ; 
-        node = tmp; 
-
-        
+        prev_node = new_node;
     }
 
-    return node ; 
+    return head;
 }
-int main () {
 
-    NODE *Node = fill(10) ; 
+void print(NODE *node) {
+    while (node != NULL) {
+        printf("%d\n", node->data);
+        node = node->next;
+    }
+}
 
+int main() {
+    NODE *node = fill(10);
+    print(node);
 
-
-    return 0; 
+    return 0;
 }
