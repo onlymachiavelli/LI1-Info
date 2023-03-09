@@ -7,7 +7,7 @@ typedef struct node {
 } NODE;
 
 NODE *fill(int n) {
-    NODE *head = NULL;
+    NODE *head = (NODE*)malloc(sizeof(NODE));
     NODE *prev_node = NULL;
     int data;
 
