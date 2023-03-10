@@ -12,7 +12,6 @@ def prime(num) :
     check = True 
     for i in range (2,  (num//2)+1) :
         if (num % i == 0) :
-            print(i)
             check = False 
             break
 
@@ -30,3 +29,5 @@ def luckyNumber (n:int ) ->int :
             return False
         
     return True 
+
+print(luckyNumber(7))
