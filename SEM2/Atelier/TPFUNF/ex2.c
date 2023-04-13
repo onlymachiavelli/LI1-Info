@@ -38,14 +38,25 @@ void print(NODE *node) {
     }
 }
 
-int main() {
+void addFirst(NODE **head) {
+    NODE *new_node = (NODE *)malloc(sizeof(NODE));
+    printf("Enter the data to be added at the first of the list \n"); 
+    scanf("%d", &new_node->data); 
+    new_node->next = *head; 
+    *head = new_node; 
+}
 
+void addEnd(NODE**head) {
+    NODE*new_node = (NODE*)malloc(sizeof(NODE)) ;
+    
+}
+
+int main() {
     int n ; 
     printf("Enter N \n") ;
     scanf("%d", &n);
-
     NODE *node = fill(n);
+    addFirst(&node); 
     print(node);
-
     return 0;
 }
