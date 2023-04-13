@@ -15,3 +15,4 @@ int main () {
 
     printf("The first data is : %d" , head->val); 
 }
+

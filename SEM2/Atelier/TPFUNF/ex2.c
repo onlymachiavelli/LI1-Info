@@ -7,7 +7,7 @@ typedef struct node {
 } NODE;
 
 NODE *fill(int n) {
-    NODE *head = (NODE*)malloc(sizeof(NODE));
+    NODE *head = NULL; // initialize head to NULL
     NODE *prev_node = NULL;
     int data;
 
@@ -40,23 +40,81 @@ void print(NODE *node) {
 
 void addFirst(NODE **head) {
     NODE *new_node = (NODE *)malloc(sizeof(NODE));
-    printf("Enter the data to be added at the first of the list \n"); 
-    scanf("%d", &new_node->data); 
-    new_node->next = *head; 
-    *head = new_node; 
+    printf("Enter the data to be added at the beginning of the list: ");
+    scanf("%d", &new_node->data);
+    new_node->next = *head;
+    *head = new_node;
 }
 
-void addEnd(NODE**head) {
-    NODE*new_node = (NODE*)malloc(sizeof(NODE)) ;
-    
+void addEnd(NODE **head) {
+    NODE *new_node = (NODE *)malloc(sizeof(NODE));
+    printf("Enter the data you want to insert at the end of the list: ");
+    scanf("%d", &new_node->data);
+    new_node->next = NULL;
+
+    if (*head == NULL) {
+        *head = new_node;
+    }
+    else {
+        NODE *current = *head;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        current->next = new_node;
+    }
 }
 
+void deleteNode(NODE**head) {
+    NODE *current = *head;
+    NODE *prev = NULL;
+    int data;
+    printf("Enter the data you want to delete: ");
+    scanf("%d", &data);
+
+    if (current != NULL && current->data == data) {
+        *head = current->next;
+        free(current);
+        return;
+    }
+
+    while (current != NULL && current->data != data) {
+        prev = current;
+        current = current->next;
+    }
+
+    if (current == NULL) {
+        printf("The data you entered is not in the list");
+        return;
+    }
+
+    prev->next = current->next;
+    free(current);
+}
+
+
+void Reverse(NODE**head) {
+    NODE *prev = NULL;
+    NODE *current = *head;
+    NODE *next = NULL;
+
+    while (current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    *head = prev;
+}
 int main() {
     int n ; 
-    printf("Enter N \n") ;
+    printf("Enter N: ");
     scanf("%d", &n);
     NODE *node = fill(n);
     addFirst(&node); 
+    addEnd(&node);
+    deleteNode(&node);
+    Reverse(&node);
     print(node);
     return 0;
 }
+
