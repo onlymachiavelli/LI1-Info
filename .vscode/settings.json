@@ -3,6 +3,8 @@
     "strings.h": "c",
     "iostream": "cpp",
     "cmath": "cpp",
-    "TRY.C": "cpp"
+    "TRY.C": "cpp",
+    "array": "c",
+    "string": "c"
   }
 }
