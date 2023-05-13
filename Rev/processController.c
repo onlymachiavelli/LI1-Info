@@ -30,7 +30,10 @@ int main (){
                 break;
             case 3:
                 printf(kill(process, SIGKILL) ==0? "Done killing the process \n" : err);
-                break; 
+                break;
+
+            case 4:
+                printf() 
         }
 
         printf("You still want to stay ? 0->no else ->yes\n") ;
