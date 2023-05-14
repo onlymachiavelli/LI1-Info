@@ -1,22 +1,28 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include <signal.h>
 
-void handler(int signal) {
-    printf("Received signal %d\n", signal);
+
+void hello(int signal) {
+    printf("\nhello Received %d signal \n", signal) ;
+
+    exit(1); 
 }
 
-int main() {
-    // Register the signal handler function
-    signal(SIGSTOP, handler);
-
-    // Send the SIGSTOP signal 10 times with a delay of 1 second
-    for (int i = 0; i < 10; i++) {
-        printf("Process %d\n", getpid());
-        sleep(1);
-        raise(SIGSTOP);
+void world(int signal) {
+    printf("\nworld Received %d signal \n", signal);
+    exit(1);
+}
+int main () {
+    while (1){
+        printf("Hello fcker ! \n");
+        signal(SIGINT, hello);
+        signal(SIGTSTP, world) ;
+        sleep(1) ; 
     }
+    printf("End of the software ! \n") ;
 
-    return 0;
+    return 0 ; 
+
 }
